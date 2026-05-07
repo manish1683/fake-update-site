@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Windows Update</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SETTINGS PANEL (hidden by default) -->
+  <div id="settings-panel">
+    <h3>⚙️ Prank Settings</h3>
+
+    <label>Custom Message</label>
+    <input type="text" id="custom-msg" placeholder="Installing: PRANK.exe" />
+
+    <label>Speed</label>
+    <select id="speed-select">
+      <option value="slow">Slow (scary)</option>
+      <option value="normal" selected>Normal</option>
+      <option value="fast">Fast</option>
+    </select>
+
+    <label>OS Theme</label>
+    <select id="os-select">
+      <option value="win10">Windows 10</option>
+      <option value="win11">Windows 11</option>
+      <option value="bsod">Blue Screen of Death</option>
+    </select>
+
+    <button id="start-btn">▶ START PRANK</button>
+    <button id="share-btn">🔗 Copy Prank Link</button>
+  </div>
+
+  <!-- TOGGLE SETTINGS BUTTON -->
+  <button id="gear-btn" title="Settings">⚙</button>
+
+  <!-- WINDOWS 10 UPDATE SCREEN -->
+  <div id="win10-screen" class="os-screen active">
+    <div class="win-logo">
+      <svg viewBox="0 0 88 88" width="80" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#f25022" d="M0 0h42v42H0z"/>
+        <path fill="#7fba00" d="M46 0h42v42H46z"/>
+        <path fill="#00a4ef" d="M0 46h42v42H0z"/>
+        <path fill="#ffb900" d="M46 46h42v42H46z"/>
+      </svg>
+    </div>
+
+    <p class="update-label" id="status-text">Working on updates</p>
+    <p class="percent-text" id="percent-display">0% complete</p>
+
+    <div class="progress-track">
+      <div class="progress-fill" id="progress-bar"></div>
+    </div>
+
+    <p class="dont-turn-off">Don't turn off your PC. This will take a while.</p>
+    <p class="restart-note">Your PC will restart several times.</p>
+  </div>
+
+  <!-- WINDOWS 11 UPDATE SCREEN -->
+  <div id="win11-screen" class="os-screen">
+    <div class="win11-logo">
+      <svg viewBox="0 0 88 88" width="72" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="40" height="40" fill="white" rx="4"/>
+        <rect x="48" y="0" width="40" height="40" fill="white" rx="4"/>
+        <rect x="0" y="48" width="40" height="40" fill="white" rx="4"/>
+        <rect x="48" y="48" width="40" height="40" fill="white" rx="4"/>
+      </svg>
+    </div>
+    <div class="win11-spinner">
+      <div class="spinner-dot" style="--i:0"></div>
+      <div class="spinner-dot" style="--i:1"></div>
+      <div class="spinner-dot" style="--i:2"></div>
+      <div class="spinner-dot" style="--i:3"></div>
+      <div class="spinner-dot" style="--i:4"></div>
+    </div>
+    <p class="win11-msg" id="win11-status">Getting things ready</p>
+    <p class="win11-percent" id="win11-percent">0%</p>
+    <p class="win11-sub">Your PC will restart several times. Don't turn it off.</p>
+  </div>
+
+  <!-- BSOD SCREEN -->
+  <div id="bsod-screen" class="os-screen">
+    <div class="bsod-emoji">:(</div>
+    <h1 class="bsod-title">Your PC ran into a problem and needs to restart.</h1>
+    <p class="bsod-sub">We're just collecting some error info, and then we'll restart for you.</p>
+    <p class="bsod-percent" id="bsod-percent">0% complete</p>
+    <p class="bsod-code">Stop code: CRITICAL_PROCESS_DIED</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
