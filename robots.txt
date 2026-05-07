@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fake-update-mk-2939a.web.app/sitemap.xml
