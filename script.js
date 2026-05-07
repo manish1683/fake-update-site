@@ -145,3 +145,33 @@ document.getElementById('share-btn').addEventListener('click', () => {
   // Track link copied
   if (typeof gtag !== 'undefined') trackLinkCopied();
 });
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/sitemap.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml"
+          }
+        ]
+      },
+      {
+        "source": "/robots.txt",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain"
+          }
+        ]
+      }
+    ]
+  }
+}
