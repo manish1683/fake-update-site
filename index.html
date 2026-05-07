@@ -16,26 +16,6 @@
 <meta property="og:url" content="https://fake-update-mk.web.app" />
 <meta property="og:type" content="website" />
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-
-  // Track prank start event
-  function trackPrankStart(os, speed) {
-    gtag('event', 'prank_started', {
-      'os_type': os,
-      'speed': speed
-    });
-  }
-
-  // Track prank link copied
-  function trackLinkCopied() {
-    gtag('event', 'prank_link_copied');
-  }
 </script>
 </head>
 <body>
